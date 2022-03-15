@@ -25,6 +25,7 @@ const TodoApp = {
       if (this.newTodo.text) {
         this.todos.push(this.newTodo)
         this.newTodo = { done: false }
+        localStorage.setItem('todos', JSON.stringify(this.todos))
       } else {
         alert("the input file is empty")
       }

@@ -24,13 +24,12 @@
                 <div v-for="todo in todos" class="single-todo" :class="{done: todo.done}">
                     <p>{{todo.text}}</p>
                 </div>
-
             </div>
 
             <button class="clear">Clear All</button>
 
-            <input type="text" placeholder="Add new to-do">
-            <button class="add">Add</button>
+            <input type="text" placeholder="Add new to-do" v-model="newTodo.text">
+            <button class="add" @click="addTodo()" >Add</button>
 
             <div class="instructions">
                 Instructions:
